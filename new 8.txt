@@ -1,0 +1,19 @@
+class Solution {
+    public String reverse(String S) {
+        // code here
+        char[] rev = new char[S.length()];
+        
+        Stack<Character> stacked = new Stack<Character>();
+        
+        for(int i=0;i<S.length(); i++){
+            
+         stacked.push(S.charAt(i));
+        }
+        int i=0;
+        while(!stacked.isEmpty()){
+           rev[i++] =stacked.pop();
+        }
+         return new String(rev);
+    }
+   
+}
